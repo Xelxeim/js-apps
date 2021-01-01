@@ -1,0 +1,60 @@
+@import "base/base";
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        max-height: 700px;
+        background-color: #123456;
+        border: 2px double black ;
+        font-size: 32px;
+        color: white;
+        text-align: center;
+    }
+
+    &__row {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        max-height: 100px;
+        display: flex;
+        border: 2px double black;
+    }
+
+    &__result {
+        background-color: white;
+        font-size: 32px;
+        color: black;
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 100px;
+        height: 100%;
+        max-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 1px double black;
+        background-color: #123456;
+        font-size: 32px;
+        color: white;
+    }
+
+    &__item-output {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        max-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none
+    }
+}
