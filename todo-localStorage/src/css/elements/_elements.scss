@@ -1,0 +1,52 @@
+.title {
+    font-size: 3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        border: 1.5px solid #d8cece;
+    }
+}
+
+.btn-add {
+    padding: 2rem;
+    margin: 1.5rem 0 0 1.5rem;
+    color: #ffffff;
+    background: #2ba349;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+}
+
+.btn-delete {
+    padding: 2rem;
+    margin-left: 1rem;
+    color: #ffffff;
+    background: #d60e0e;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+}
+
+.btn-important {
+    padding: 2rem;
+    margin-left: 1rem;
+    color: #ffffff;
+    background: #3016c4;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+}
+
+@media (max-width: 550px){
+    .btn-add {
+        font-size: 4rem;
+        padding: 2rem 5rem;
+    }
+}
