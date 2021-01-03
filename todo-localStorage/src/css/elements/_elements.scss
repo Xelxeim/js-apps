@@ -25,23 +25,45 @@
 }
 
 .btn-delete {
-    padding: 2rem;
+    width: 5rem;
+    height: 5rem;
     margin-left: 1rem;
     color: #ffffff;
     background: #d60e0e;
     border: none;
     border-radius: 1rem;
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
 .btn-important {
-    padding: 2rem;
+    width: 5rem;
+    height: 5rem;
     margin-left: 1rem;
     color: #ffffff;
     background: #3016c4;
     border: none;
     border-radius: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
+}
+
+.btn-checkbox {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    font-size: 0.01rem;
+}
+
+.btn-checkbox_active {
+    font-size: 2rem;
+    color: green;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.completed {
+    opacity: 0.5;
 }
 
 @media (max-width: 550px){

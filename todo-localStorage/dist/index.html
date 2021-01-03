@@ -7,39 +7,16 @@
     <link rel="stylesheet" href="/css/main.min.css">
 </head>
 <body>
-    <main class="main">
+    <main class="main" id="main">
         <h1 class="main__title title">Simple To-Do list</h1>
-        <form class="main__form">
-            <input type="text" class="main__input" placeholder="Type there what to do">
-            <button type="submit" class="btn btn-add">Add</button>
-        </form>
-        <ul class="main__data">
-            <li class="main__data-item">
-                <input type="checkbox" class="main__checkbox">
-                <p class="main__todo-task">Родиться</p>
-                <div class="main__btn-wrapper">
-                    <button class="btn btn-important"></button>
-                    <button class="btn btn-delete"></button>
-                </div>
-            </li>    
-            <li class="main__data-item">
-                <input type="checkbox" class="main__checkbox">
-                <p class="main__todo-task">Похихикать местами</p>
-                <div class="main__btn-wrapper">
-                    <button class="btn btn-important"></button>
-                    <button class="btn btn-delete"></button>
-                </div>
-                
-            </li>
-            <li class="main__data-item">
-                <input type="checkbox" class="main__checkbox">
-                <p class="main__todo-task">Умереть</p>
-                <div class="main__btn-wrapper">
-                    <button class="btn btn-important"></button>
-                    <button class="btn btn-delete"></button>
-                </div>
-            </li>    
+        <div class="main__form">
+            <input type="text" class="main__input" id="main__input" placeholder="Type there what to do">
+            <button type="submit" class="btn btn-add" data-action="add">Add</button>
+        </div>
+        <ul class="main__data" id="data-list">
+            
         </ul>
     </main>
+    <script src="/js/script.min.js"></script>
 </body>
 </html>

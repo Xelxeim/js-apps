@@ -49,29 +49,24 @@
             font-size: 2.5rem;
             border: 1px solid #000000;
             border-radius: 1rem;
-            background-color: #ffffff;
-            opacity: 0.8;
+            background-color: #accbde;
             &:first-child {
                 margin-top: 1.5rem;
             }
         }
     }
 
-    &__checkbox {
-        width: 3rem;
-        height: 3rem;
-        margin-right: 1rem;
-    }
-
     &__todo-task {
-        max-width: 41rem;
-        min-width: 41rem;
+        max-width: 40rem;
+        min-width: 40rem;
         font-family: 'Marck Script', cursive;
         word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     &__btn-wrapper {
         margin-left: 3rem;
+        display: flex;
     }
 
     @media (max-width: 550px){
