@@ -9,8 +9,7 @@ app.addEventListener("click", ({ target }) => {
     if (action) {
         switch(action) {
             case "add":
-                getValue("main__input")
-                addTask(task);
+                if (getValue("main__input")) addTask(task);
                 break;
             case "check":
                 completeTask(target);
