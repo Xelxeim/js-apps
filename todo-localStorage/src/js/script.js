@@ -59,6 +59,7 @@ function completeTask(target){
 }
 
 function highlightTask(target){
+    toggleClass(target, "highlighted")
     toggleClass(target.previousElementSibling, "bold")
 }
 
