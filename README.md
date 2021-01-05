@@ -1,2 +1,10 @@
-# native-js-apps
-Repository for uploading native JavaScript apps
+# js-apps
+This repository predominantly contains applications using native syntax of JavaScript and some their modifications. 
+
+## Applications and technologies
++ calculator - HTML, SCSS, native JS, Gulp;
++ todo-localStorage - HTML, SCSS, native JS, Gulp;
++ todo-db - HTML, SCSS, JS, NodeJS with express, MongoDB;
+
+## Feedback
+For any questions contact me via email: xelxeim@gmail.com
