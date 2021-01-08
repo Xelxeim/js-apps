@@ -7,19 +7,42 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <section class="modal">
-        
-    </section>
-    <main class="main" id="main">
-        <h1 class="main__title title">Simple To-Do list</h1>
-        <form class="main__form" action="/" method="POST">
-            <input type="text" class="main__input" id="main__input" name="task" placeholder="Type there what to do">
-            <button type="submit" class="btn btn-add" data-action="add">Add</button>
-        </form>
-        <ul class="main__data" id="data-list">
-            
-        </ul>
-    </main>
-    <script src="./js/script.min.js"></script>
+    <div class="page-wrapper">
+        <div class="modal">
+            <ul class="modal__switcher" id="switcher">
+                <li class="modal__switcher-item activated" id="in-switch">Sign In</li>
+                <li class="modal__switcher-item" id=up-switch>Sign Up</li>
+            </ul>
+            <div class="modal__content">
+                <div id="sign-in">
+                    <form action="#" class="form modal__form" method="POST">
+                        <input type="text" class="modal__input input" placeholder="Enter your name">
+                        <input type="password" class="modal__input input" placeholder="Enter your password">
+                        <button type="submit" class="btn btn-add">Enter</button>
+                    </form>
+                </div>
+                <div id="sign-up" class="invisible">
+                    <form action="#" class="form modal__form" method="POST">
+                        <input type="text" class="modal__input input" placeholder="Enter your name">
+                        <input type="password" class="modal__input input" placeholder="Enter your password">
+                        <button type="submit" class="btn btn-add">Register</button>
+                    </form>
+                </div>
+            </div>  
+        </div>
+
+        <main class="main hide-bg" id="main">
+            <h1 class="main__title title">Simple To-Do list</h1>
+            <div class="main__form form">
+                <input type="text" class="main__input input" id="main__input input" placeholder="Type there what to do">
+                <button type="submit" class="btn btn-add" data-action="add">Add</button>
+            </div>
+            <ul class="main__data" id="data-list">
+                
+            </ul>
+        </main>
+    </div>
+    
+    <script src="./js/script.js"></script>
 </body>
 </html>
