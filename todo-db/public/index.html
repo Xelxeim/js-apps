@@ -15,28 +15,28 @@
             </ul>
             <div class="modal__content">
                 <div id="sign-in">
-                    <form action="#" class="form modal__form" method="POST">
-                        <input type="text" class="modal__input input" placeholder="Enter your name">
-                        <input type="password" class="modal__input input" placeholder="Enter your password">
+                    <form action="/auth" method="POST" class="form modal__form">
+                        <input type="text" class="modal__input input" name="username" placeholder="Enter your name">
+                        <input type="password" class="modal__input input" name="password" placeholder="Enter your password">
                         <button type="submit" class="btn btn-add">Enter</button>
                     </form>
                 </div>
                 <div id="sign-up" class="invisible">
-                    <form action="#" class="form modal__form" method="POST">
-                        <input type="text" class="modal__input input" placeholder="Enter your name">
-                        <input type="password" class="modal__input input" placeholder="Enter your password">
+                    <form action="/register" method="POST" class="form modal__form">
+                        <input type="text" class="modal__input input" name="username" placeholder="Enter your name">
+                        <input type="password" class="modal__input input" name="password" placeholder="Enter your password">
                         <button type="submit" class="btn btn-add">Register</button>
                     </form>
                 </div>
             </div>  
         </div>
 
-        <main class="main hide-bg" id="main">
+        <main class="main hide-bg" id="main"> <!-- hide-bg -->
             <h1 class="main__title title">Simple To-Do list</h1>
-            <div class="main__form form">
-                <input type="text" class="main__input input" id="main__input input" placeholder="Type there what to do">
+            <form class="main__form form" method="POST" action="/">
+                <input type="text" class="main__input input" id="main__input" name="task" placeholder="Type there what to do">
                 <button type="submit" class="btn btn-add" data-action="add">Add</button>
-            </div>
+            </form>
             <ul class="main__data" id="data-list">
                 
             </ul>
