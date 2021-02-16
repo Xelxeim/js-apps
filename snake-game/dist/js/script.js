@@ -1,11 +1,17 @@
+const bestScore = document.getElementById("best-score");
+const currentScore = document.getElementById("current-score");
 const canvas = document.getElementById("game");
+
 const ctx = canvas.getContext("2d");
 const bg = new Image(400, 400);
 bg.src = '../static/img/field.png';
 const blockSize = 25;
 
 let score = 0;
+let speed = 150; // ms, for interval
 let direction;
+
+bestScore.textContent = `Your best score is ${localStorage.getItem("bestScore")}`;
 
 const foodTypes = [];
 for (let i = 1; i <= 3; i++){
@@ -27,14 +33,23 @@ snake[0] = {
 };
 
 function generateFood(){
-  const food = {
+  let generatedFood = {
     x: Math.floor((Math.random() * 16)),
     y: Math.floor((Math.random() * 16)),
     img: foodTypes[Math.floor(Math.random() * foodTypes.length)]
   };
-
-  return food;
+  console.log(generatedFood.x, generatedFood.y);
+  if (emptySpaceCheck(generatedFood.x, generatedFood.y)) return generatedFood;
+  else return generateFood();
 }
+
+function emptySpaceCheck(x, y){
+  for(let i = 0; i < snake.length; i++){
+    if(x == snake[i].x && y == snake[i].y) return false;
+  }
+  return true;
+}
+
 
 function move(){
   let snakeX = snake[0].x;
@@ -111,15 +126,32 @@ function eat(){
     score += 1;
     food = generateFood();
     snakeGrow();
+    updateScore();
   }
+}
+
+function updateScore(){
+  currentScore.textContent = `Score: ${score}`;
 }
 
 function deathCheck() {
   for(let i = 1; i<=snake.length - 1; i++){
     if (snake[0].x === snake[i].x && snake[0].y === snake[i].y){
-      console.log("Game over"); // paste gameover code 
+      gameOver();
     }
   }
+}
+
+function gameOver() {
+  clearInterval(game);
+  if(localStorage.getItem("bestScore") < score) {
+    localStorage.setItem('bestScore', score);
+  }
+  
+  ctx.fillStyle = "#8B0000";
+	ctx.font = "48px Roboto";
+	ctx.fillText("Game over", 4 * blockSize, 6 * blockSize);
+	ctx.fillText(`Your score: ${score}`, 3 * blockSize, 10 * blockSize);
 }
 
 function drawGame() {
@@ -152,4 +184,4 @@ document.addEventListener("keydown", e => {
   } 
 });
 
-let game = setInterval(drawGame, 150);
+let game = setInterval(drawGame, speed);

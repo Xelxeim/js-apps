@@ -38,10 +38,19 @@ p {
 .main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #game {
-  margin-top: 7.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+#best-score,
+#current-score {
+  margin-top: 2.5rem;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 690px) {
@@ -53,5 +62,10 @@ p {
 @media (max-width: 550px) {
   html {
     font-size: 5px;
+  }
+
+  #best-score,
+  #current-score {
+    font-size: 4rem;
   }
 }
